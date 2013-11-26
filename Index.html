@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Logo-Chelys</title>
+	  <link   rel="shortcut icon" href="images/favicon.ico">
+	  <link   type="text/css" rel="stylesheet" href="estilo.css"></style>
+	  <script type="text/javascript" src="scripts/mathlib-min.js"></script>
+	  <script type="text/javascript" src="scripts/k3d-min.js"></script>
+	  <script type="text/javascript" src="scripts/AnalizadorLexico.js"></script>
+	  <script type="text/javascript" src="scripts/AnalizadorSintactico.js"></script>
+	  <script type="text/javascript" src="scripts/AnalizadorSemantico.js"></script>
+   </head>
+   <body>
+		<br />
+		<h1>Logo-Chelys</h1>
+		<br />
+		<div id="main">
+			<div id="layers">
+				<div id="div-code">
+					<form name="textArea">
+						<textarea id="code"></textarea>
+					</form>
+				</div>
+				<div id="div-visua">
+					<canvas id="canvas" width="380" height="380"></canvas>
+				</div>
+				<div id="div-table">
+					<div class="result">
+						<table id="syntaxTable" class="table">
+						<thead>
+							<tr>
+								<th>Token</th>
+								<th>Lexema</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="div-simbols">
+					<div class="result">
+						<table id="simbolsTable" class="table">
+							<thead>
+								<tr>
+									<th>Letra Inicial</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<input type="button" value="Ejecutar" class="button" onclick="Ejecutar()"/>
+				<input type="button" value="Analisis Lexico" class="button" onclick="AnalisisLexico()"/>
+				<input type="button" value="Analisis Sintáctico" class="button" onclick="AnalisisSintactico()"/>
+				<input type="button" value="Analisis Semantico" class="button" onclick="AnalisisSemantico()"/>
+				<input type="button" value="Tablas de simbolos" class="button" onclick="TablasSimbolos()"/>
+				<input type="button" value="Limpiar Datos" class="button" onclick="LimpiarDatos()"/>
+			</div>
+			<div class="controls">
+				<h3>Ejemplos</h3>
+				<select id="sel" size="3" onchange="ejemplo(this.options[this.selectedIndex].value)" >
+					<optgroup label="Ejemplos"> 
+					<option>Triangulo</option>
+					<option>Cuadrado</option>
+					<option>Hexagono</option>
+					<option>360-gono</option>
+					<option>Casa</option>
+					<option>Molino</option>
+					<option>Rombo</option>
+					<option>Figura_3D</option>
+					<option>Dona</option>
+				</select>
+			</div>
+		</div>
+   </body>
+</html>
+
